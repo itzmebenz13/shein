@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Member Dashboard</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #0f0;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 20px;
+    }
+    input, button {
+      background: black;
+      color: #0f0;
+      border: 1px solid #0f0;
+      padding: 8px;
+      margin-top: 10px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      background: #222;
+      margin: 5px 0;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Welcome, <span id="displayUser"></span></h2>
+  <p>Your current IP: <span id="currentIP">Loading...</span></p>
+  <h3>Whitelisted IPs</h3>
+  <ul id="ipList"></ul>
+
+  <input type="text" id="newIP" placeholder="Enter IP to whitelist" />
+  <button onclick="addIP()">Add IP</button>
+  <p id="status"></p>
+  <button onclick="proceed()">Proceed to Secure Page</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
